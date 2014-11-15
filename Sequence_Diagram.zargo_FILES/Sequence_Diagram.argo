@@ -1,0 +1,59 @@
+<argo version="6">
+  <documentation>
+    <authorname></authorname>
+    <authoremail></authoremail>
+    <version>0.34</version>
+    <description>
+      
+    </description>
+  </documentation>
+  <settings>
+    <notationlanguage>UML 1.4</notationlanguage>
+    <showboldnames>false</showboldnames>
+    <useguillemots>false</useguillemots>
+    <showassociationnames>true</showassociationnames>
+    <showvisibility>false</showvisibility>
+    <showmultiplicity>false</showmultiplicity>
+    <showinitialvalue>false</showinitialvalue>
+    <showproperties>false</showproperties>
+    <showtypes>true</showtypes>
+    <showstereotypes>false</showstereotypes>
+    <showsingularmultiplicities>true</showsingularmultiplicities>
+    <defaultshadowwidth>1</defaultshadowwidth>
+    <hidebidirectionalarrows>true</hidebidirectionalarrows>    
+    <fontname>Dialog</fontname>
+    <fontsize>12</fontsize>
+    <defaultstereotypeview>0</defaultstereotypeview>
+    <activediagram>Sign_Up_Sequence_Diagram</activediagram>
+  </settings>
+  <searchpath href="PROJECT_DIR" />
+  <members>
+    <member type="profile"
+            name="Sequence_Diagram_profile.profile" />
+    <member type="xmi"
+            name="Sequence_Diagram.xmi" />
+    <member type="pgml"
+            name="Sequence_Diagram_Login_Sequence_Diagram.pgml"
+            diagramclass="org.argouml.sequence2.diagram.UMLSequenceDiagram"
+            diagramname="Login_Sequence_Diagram" />
+    <member type="pgml"
+            name="Sequence_Diagram_Sign_Up_Sequence_Diagram.pgml"
+            diagramclass="org.argouml.sequence2.diagram.UMLSequenceDiagram"
+            diagramname="Sign_Up_Sequence_Diagram" />
+    <member type="pgml"
+            name="Sequence_Diagram_Log_Out_Sequence_Diagram.pgml"
+            diagramclass="org.argouml.sequence2.diagram.UMLSequenceDiagram"
+            diagramname="Log_Out_Sequence_Diagram" />
+    <member type="pgml"
+            name="Sequence_Diagram_Join_Sequence_Diagram.pgml"
+            diagramclass="org.argouml.sequence2.diagram.UMLSequenceDiagram"
+            diagramname="Join_Sequence_Diagram" />
+    <member type="pgml"
+            name="Sequence_Diagram_Display_Profile_Sequence_Diagram.pgml"
+            diagramclass="org.argouml.sequence2.diagram.UMLSequenceDiagram"
+            diagramname="Display_Profile_Sequence_Diagram" />
+    <member type="todo"
+            name="Sequence_Diagram.todo" />
+  </members>
+  <historyfile name="" />
+</argo>
