@@ -1,0 +1,66 @@
+*{
+	margin:0px;
+	padding:0px;
+}
+.page1{
+	height:659px;
+	background-color:#EDEDED;
+}
+.navbar{
+	color:#FFE754;
+	height:85px;
+	background-color:#234F32;
+}
+button.firstbutton{
+	width:50px;
+	height:21px;
+	font-size:12px;
+	text-align:center;
+}
+.projectName{
+	float:left;
+	width:250px;
+	height:85px;
+	font-size:36px;
+	line-height:85px;
+	margin-left:30px;
+}
+td.test{
+	padding-right:3px;
+}
+.login_info{
+	font-size:18px;
+	float:right;
+	padding-top:15px;
+	margin-right:30px;
+}
+.test1{
+	border-radius:150px;
+}
+.sign_up_form{
+	width:auto;
+	height:520px;
+	margin-top:50px;
+	font-size:19px;
+	margin-left:70%;
+	color:#000;
+	line-height:35px;
+}
+.page1 .publicity{
+	width:65%;
+	height:574px;
+	float:left;
+	text-align:center;
+	line-height:558px;
+	background-image:url(../../../../../../../LOGO_EO.jpg);
+	background-size:contain;
+	border-radius:50px;
+}
+input{
+	font-size:15px;
+}
+button{
+	width:125px;
+	height:30px;
+	text-align:center;
+}
