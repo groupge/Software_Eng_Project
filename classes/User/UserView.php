@@ -18,11 +18,11 @@ class UserView {
     private $NotifView; //Class NotificationView
     private $UserCtrl; //Class UsersController
 
-    public function __construct($UseCtrl) {
+    public function __construct($UseCtrl,$SettCtrl,$PrefControl,$ntCTRL) {
         $this->UserCtrl = $UseCtrl;
-        $this->SettView = new SetingsView();
-        $this->PrefView = new PreferencesView();
-        $this->NotifView = new NotificationView();
+        $this->SettView = new SetingsView($SettCtrl);
+        $this->PrefView = new PreferencesView($PrefControl);
+        $this->NotifView = new NotificationView($ntCTRL);
     }
     
     public function viewFollowers(){

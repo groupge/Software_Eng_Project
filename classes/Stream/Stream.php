@@ -5,9 +5,10 @@ class Stream implements AbstractView {
     private $EvntView;
     private $EvntCTRL;
     
-    public function __construct($cuid, $evntctrl) {
+    public function __construct($cuid, $evntctrl
+                                ,$evtId, $editMod, $evtCtrl) {
         $this->currentID = $cuid;
-        $this->EvntView = new EventView();
+        $this->EvntView = new EventView($evtId, $editMod, $evtCtrl);
         $this->EvntCTRL = $evntctrl;
     }
     

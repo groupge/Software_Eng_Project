@@ -17,11 +17,24 @@ class MainView implements AbstractView {
         
     }
     
-    public function __construct() {
-        $this->usrView = new UserView();
-        $this->streamVar = new Stream();
-        $this->main = new Main();
-        $this->EvntView = new EventView();
+    public function __construct($UseCtrl, $SettCtrl, $PrefControl, $EvntCTRL
+                                ,$cuid, $evtId, $editMod, $evtCtrl
+                                ,$userID, $currUsrId, $evtDM, $usrDM, $evID, $evName
+                                , $evDescp, $evCatgry, $evLocation, $evDay, $evStrtTime
+                                , $evEndTime, $evNumberOfTickets, $usId, $interst
+                                , $myTick, $notif, $followers, $following
+                                , $mailRemind, $notiRemind, $preferCtrl
+                                , $notiID, $notification, $seen)
+    {
+        $this->usrView = new UserView($UseCtrl, $SettCtrl, $PrefControl, $EvntCTRL);
+        $this->streamVar = new Stream($cuid, $EvntCTRL, $evtId, $editMod, $evtCtrl);
+        $this->main = new Main($userID, $currUsrId, $evtDM, $usrDM, $evID, $evName
+                                , $evDescp, $evCatgry, $evLocation, $evDay, $evStrtTime
+                                , $evEndTime, $evNumberOfTickets, $usId, $interst
+                                , $myTick, $notif, $followers, $following
+                                , $mailRemind, $notiRemind, $preferCtrl, $SettCtrl
+                                , $notiID, $notification, $seen);
+        $this->EvntView = new EventView($evtId, $editMod, $evtCtrl);
     }
     
     public function signIn()

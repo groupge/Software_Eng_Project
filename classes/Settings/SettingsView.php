@@ -15,10 +15,13 @@ include './SettingsController.php';
 class SetingsView implements AbstractView{
     private $SetCtrl;
     
-    public function editName($SettCtrl){
+    public function __construct($SettCtrl){
         $this->SetCtrl = $SettCtrl;
     }
     
+    public function editName($SettCtrl){
+        $this->SetCtrl = $SettCtrl;
+    }
     public function editMail(){
         
     }

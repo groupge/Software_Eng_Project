@@ -22,15 +22,19 @@ class User {
     private $Tick; // Class Tickets
     private $EventCtgry; // Class EventCategory
 
-    public function __construct($usId, $interst, $myTick, $notif) {
+    public function __construct($usId, $interst, $myTick, $notif
+                                ,$followers, $following, $mailRemind
+                                , $notiRemind, $preferCtrl, $SettCtrl
+                                ,$notiID, $notification, $seen) 
+    {
         $this->userId = $usId;
         $this->interests = $interst;
         $this->myTickets = $myTick;
         $this->notifications = $notif;
-        $this->Prof =  new Profile();
-        $this->Notif = new Notification();
+        $this->Prof =  new Profile($followers, $following, $mailRemind, $notiRemind, $preferCtrl, $SettCtrl);
+        $this->Notif = new Notification($notiID, $notification, $seen);
         $this->Tick = new Ticket();
-        $this->EventCtgry = new EventCategory();
+        $this->EventCtgry =  EventCategory::Art;
     }
     
     public function setUserId($useID){

@@ -2,7 +2,7 @@
 include './EventController.php';
 include './EventView.php';
 include './EventDatabaseManager.php';
-
+include '../EventCategory.php';
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -31,7 +31,7 @@ class Event {
     public function __construct($evID, $evName, $evDescp, $evCatgry,
                                 $evLocation, $evDay, $evStrtTime, $evEndTime,
                                 $evNumberOfTickets) {
-        $this->eventCategry = new EventCategory();
+        $this->eventCategry = EventCategory::Art;
         $this->eventID = $evID;
         $this->name = $evName;
         $this->description = $evDescp;

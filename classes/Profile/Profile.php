@@ -6,11 +6,12 @@ class Profile {
     private $pref;
     private $settings;
     
-    public function __construct($followers, $following) {
+    public function __construct($followers, $following,$mailRemind
+                                 ,$notiRemind, $preferCtrl,$SettCtrl) {
         $this->followers = $followers;
         $this->following = $following;
-        $this->pref = new Preferences();
-        $this->settings = new Settings();
+        $this->pref = new Preferences($mailRemind, $notiRemind, $preferCtrl);
+        $this->settings = new Settings($SettCtrl);
     }
     
     public function getFollowers()

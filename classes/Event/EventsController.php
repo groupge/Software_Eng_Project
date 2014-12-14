@@ -21,11 +21,14 @@ class EventsController {
     private $UsrDBM;//Class UserDatabaseManager
     private $Evt; //Class Event
     
-    public function __construct($currUsrId, $evtDM, $usrDM) {
+    public function __construct($currUsrId, $evtDM, $usrDM,$evID, $evName
+                                , $evDescp, $evCatgry, $evLocation, $evDay
+                                , $evStrtTime, $evEndTime, $evNumberOfTickets) 
+    {
         $this->currentUserId = $currUsrId;
         $this->EvtDBM = $evtDM;
         $this->UsrDBM = $usrDM;
-        $this->Evt = new Event();
+        $this->Evt = new Event($evID, $evName, $evDescp, $evCatgry, $evLocation, $evDay, $evStrtTime, $evEndTime, $evNumberOfTickets);
     }
     
     public function getEvent($eventID){
