@@ -25,7 +25,7 @@ class Event {
     private $startTime; //Time
     private $endTime; //Time
     private $numberOfTickets;//int
-    private $eventCategry; //Class EventCatagory
+    //private $eventCategry; //Class EventCatagory /*Bakary : this was not necessairy since we have category declared up*/
 
 
     public function __construct($evID, $evName, $evDescp, $evCatgry,

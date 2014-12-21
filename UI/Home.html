@@ -5,7 +5,7 @@
 <head>
 <link rel="stylesheet" type="text/css" href="Home.css" />
 <!--link rel="stylesheet" type="text/css" href="Containt.css"/-->
-<link rel="stylesheet" type="text/javascript" href="Home.js"/>
+<link rel="stylesheet" type="text/Javascript" href="Home.js"/>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>Home Event Organizer</title>
 </head>
@@ -22,18 +22,35 @@
 
 <section class="page1">
     <ul>
-    <li><a href="#" onclick="clickCreate()">Create Event</a></li>
+    <li><a href="#" onclick="clickCreate();" >Create Event</a></li>
     <li><a href="#" onclick="">View Events</a></li>
     <li><a href="#" onclick="">Search for Event</a></li>
 </ul>
 </section>
 <section id="createDisplay" class="" style="display:block">
-    <div class="suggestedEvent">
-	    	<h2>Display Sugested Event</h2>
+ <section class="suggestedEvent" id="suggest">
+    </section>
+<section class="newEventDisplay" id="Display">
+	<div align="center">
+    <h3>Create New Event</h3>
     </div>
-<div class="newEventDisplay">
-	<h2> Display Create form and view events</h2>
-</div>
+    <form method="get" action="" onsubmit="">
+    	<table>
+        	<tr><td><span>Name</span>
+            </td><td>
+            <input id="name" type="text" placeholder="Enter the Event name" />
+            </td><tr>
+            <tr><td><span>Name</span>
+            </td><td>
+            <input id="name" type="text" placeholder="Enter the Event name" />
+            </td><tr>
+            <tr><td><span>Name</span>
+            </td><td>
+            <input id="name" type="text" placeholder="Enter the Event name" />
+            </td><tr>
+        </table>
+    </form>
+</section>
 </section>
 </body>
 </html> 

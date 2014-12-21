@@ -1,9 +1,4 @@
 <?php
-include './Event.php';
-include './EventView.php';
-include './EventDatabaseManager.php';
-
-
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -15,49 +10,51 @@ include './EventDatabaseManager.php';
  *
  * @author dave_pc
  */
+ require('./Event.php');
+require('./EventView.php');
+require('../DatabaseManagers/EventDatabaseManager.php');
+require('../DatabaseManagers/UserDatabaseManager.php');
+
 class EventsController {
     private $currentUserId; //int
     private $EvtDBM;//Class EventDatabaseManager
     private $UsrDBM;//Class UserDatabaseManager
     private $Evt; //Class Event
     
-    public function __construct($currUsrId, $evtDM, $usrDM,$evID, $evName
+    public function __construct($currUsrId/*,$evID, $evName
                                 , $evDescp, $evCatgry, $evLocation, $evDay
-                                , $evStrtTime, $evEndTime, $evNumberOfTickets) 
+                                , $evStrtTime, $evEndTime, $evNumberOfTickets*/) 
     {
         $this->currentUserId = $currUsrId;
-        $this->EvtDBM = $evtDM;
-        $this->UsrDBM = $usrDM;
-        $this->Evt = new Event($evID, $evName, $evDescp, $evCatgry, $evLocation, $evDay, $evStrtTime, $evEndTime, $evNumberOfTickets);
+        $this->EvtDBM = new EventDatabaseManager();
+       $this->UsrDBM = new UserDatabaseManager();
+        /*$this->Evt = new Event($evID, $evName, $evDescp, $evCatgry, $evLocation, $evDay, $evStrtTime, $evEndTime, $evNumberOfTickets);*/
+		$this->Evt = new Event(null,null,null,null,null,null,null,null,null);
     }
     
     public function getEvent($eventID){
-        //Event Function
+		$this->Evt = $this->EvtDBM->getEvent($eventID);
+		return $this->Evt;
     }
     
     public function createNewEvent($evt){
-        ////Boolean Function
-        return TRUE;
+        return $this->EvtDBM->saveEvent($evt);
     }
     
     public function saveEvent($evt){
-        //Boolean Function
-        return TRUE;
+        return $this->EvtDBM->saveEvent($evt);
     }
     
     public function joinEvent($evtID){
-        //Boolean Function
-        return TRUE;
+        return $this->EvtDBM->joinEvent($evtID);
     }
     
     public function leaveEvent($evtID){
-        //Boolean Function
-        return TRUE;
+        return $this->EvtDBM->leaveEvent($evtID);
     }
     
     public function deleteEvent($evtID){
-        //Boolean Function
-        return TRUE;
+        return $this->EvtDBM->deleteEvent($evtID, $this->currentUserId);
     }
     
     public function getRecentEvents($date){
