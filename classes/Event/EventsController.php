@@ -106,5 +106,5 @@ class EventsController {
     public function setEditedEventNumberOfTickets($newNumOfTickets){
         
     }
-    
+
 }

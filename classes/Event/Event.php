@@ -1,8 +1,8 @@
 <?php
-include './EventController.php';
-include './EventView.php';
-include './EventDatabaseManager.php';
-include '../EventCategory.php';
+require('./EventController.php');
+require('./EventView.php');
+require('../DatabaseManagers/EventDatabaseManager.php');
+require('../EventCategory.php');
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates

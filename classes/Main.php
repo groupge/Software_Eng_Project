@@ -51,7 +51,7 @@ class Main {
     }
     
     public function singIn($email, $pass){
-        return true;
+			
     }
     
     public function signUp($email, $pass){

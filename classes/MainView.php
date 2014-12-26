@@ -37,9 +37,9 @@ class MainView implements AbstractView {
         $this->EvntView = new EventView($evtId, $editMod, $evtCtrl);
     }
     
-    public function signIn()
+    public function signIn($uname, $pass)
     {
-        
+		
     }
     
     public function signUp()
@@ -69,7 +69,7 @@ class MainView implements AbstractView {
     
     public function initView()
     {
-        
+		 
     }
     
     public function  saveData()
