@@ -251,7 +251,7 @@
   font-family:'Vijaya Bold', 'Vijaya';
   font-weight:700;
   font-style:normal;
-  font-size:38px;
+  font-size:48px;
 }
 #u18_img {
   position:absolute;
