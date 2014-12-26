@@ -31,26 +31,41 @@
  <section class="suggestedEvent" id="suggest">
     </section>
 <section class="newEventDisplay" id="Display">
-	<div align="center">
-    <h3>Create New Event</h3>
+	<div>
+    <div align="center">
+    	<h2 style="font-family:Verdana, Geneva, sans-serif; font-style:italic; font-stretch:semi-condensed">Create New Event</h2>
     </div>
-    <form method="get" action="" onsubmit="">
-    	<table>
-        	<tr><td><span>Name</span>
-            </td><td>
-            <input id="name" type="text" placeholder="Enter the Event name" />
-            </td><tr>
-            <tr><td><span>Name</span>
-            </td><td>
-            <input id="name" type="text" placeholder="Enter the Event name" />
-            </td><tr>
-            <tr><td><span>Name</span>
-            </td><td>
-            <input id="name" type="text" placeholder="Enter the Event name" />
-            </td><tr>
-        </table>
-    </form>
+<form method="get" action="">
+    <table>
+            <tr><td><strong> Event Name </strong></td>
+            <td><input id="name" type="text" placeholder="Event Name"/></td><td><p id="nameError" style="color:red"/></td></tr>
+            <tr><td><strong> Event Description </strong></td>
+            <td><input id="description" type="text" placeholder="Event Description"/></td><p id="DescriptionError" style="color:red"/></td></tr>
+            <tr><td><strong> Event Locadtion</strong></td>
+            <td><input id="location" type="text" placeholder="Event Location"/></td><p id="LocationError" style="color:red"/></td></tr>
+            <tr><td><strong> Event Category </strong></td>
+            <td><select id="category">
+            <option>ART</option>
+            <option>TECH</option>
+            <option>MUSIC</option>
+            <option>ENTERTAINMENT</option>
+			<option>BUSINESS</option>
+            <option>OTHERS...</option>
+            </select></td><p id="CategoryError" style="color:red"/></td></tr>
+            <tr><td><strong>Event day </strong></td>
+            <td><input id="sDate" type="date" placeholder="Event date"/></td><p id="dateeError" style="color:red"/></td></tr>
+            <tr><td><strong>Event Start Time</strong></td>
+            <td><input id="sTime" type="time" placeholder="Event Start time"/></td><p id="sTimeError" style="color:red"/></td></tr>
+            <tr><td><strong> Event End Time </strong></td>
+            <td><input id="eTime" type="time" placeholder="Event end Time"/></td><p id="eTimeError" style="color:red"/></td></tr>
+            <tr><td><strong>Number of Ticket available</strong></td>
+            <td><input id="ticket" type="number" placeholder="Available ticket number"/></td></tr>
+            <tr><td></td><td align="right"><input style="width:auto" type="submit" value="Create"/></td></tr>
+    </table>
+ </form>
+    </div>
 </section>
 </section>
+
 </body>
 </html> 
