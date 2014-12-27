@@ -39,12 +39,4 @@ class SetingsView implements AbstractView{
         
     }
 
-    public function initView() {
-        
-    }
-
-    public function saveData() {
-        
-    }
-
 }
